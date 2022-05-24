@@ -1,7 +1,7 @@
 ---
-name:Checks
+name: Checks
 
-on:[push]
+on: [push]
 
 jobs:
   test-lint:
@@ -19,4 +19,3 @@ jobs:
         run: docker-compose run --rm app sh -c "python manage.py test"
       - name: Lint
         run: docker-compose run --rm app sh -c "flake8"
-        
